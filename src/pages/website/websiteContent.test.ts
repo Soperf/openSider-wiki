@@ -6,6 +6,7 @@ import { describe, expect, it } from 'vitest';
 import {
   CHROME_WEB_STORE_URL,
   DEFAULT_WEBSITE_LOCALE,
+  getWebsiteAssetUrl,
   getStoredWebsiteLocale,
   saveWebsiteLocale,
   websiteFeatures,
@@ -77,6 +78,10 @@ describe('产品官网内容', () => {
 
     expect(getStoredWebsiteLocale(unavailableStorage)).toBe('en');
     expect(() => saveWebsiteLocale(unavailableStorage, 'zh-CN')).not.toThrow();
+  });
+
+  it('为没有结尾斜杠的站点基路径生成正确的静态资源地址', () => {
+    expect(getWebsiteAssetUrl('/openSider-wiki', 'logo.png')).toBe('/openSider-wiki/logo.png');
   });
 });
 

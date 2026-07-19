@@ -171,6 +171,10 @@ export function getWebsiteBrowserStorage(): WebsiteStorage | null {
   }
 }
 
+export function getWebsiteAssetUrl(basePath: string, assetPath: string): string {
+  return `${basePath.replace(/\/$/, '')}/${assetPath}`;
+}
+
 export const websiteNavigation = websiteContentByLocale['zh-CN'].navigation;
 export const websiteFeatures = websiteContentByLocale['zh-CN'].features;
 export const websiteUseCases = websiteContentByLocale['zh-CN'].useCases;

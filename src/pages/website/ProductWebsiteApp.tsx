@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { Check, Chrome, Languages, Menu, Sparkles, WandSparkles } from 'lucide-react';
 import {
   CHROME_WEB_STORE_URL,
+  getWebsiteAssetUrl,
   getStoredWebsiteLocale,
   getWebsiteBrowserStorage,
   saveWebsiteLocale,
@@ -13,7 +14,7 @@ import {
   websiteContentByLocale,
 } from './websiteContent';
 
-const logo = `${import.meta.env.BASE_URL}logo.png`;
+const logo = getWebsiteAssetUrl(import.meta.env.BASE_URL, 'logo.png');
 const featureIcons = { chat: Sparkles, translate: Languages, agent: WandSparkles, byok: Check };
 
 export function ProductWebsiteApp() {
