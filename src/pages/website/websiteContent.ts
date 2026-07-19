@@ -17,7 +17,7 @@ export interface WebsiteStorage {
 
 export interface WebsiteNavigationItem {
   label: string;
-  href: '#features' | '#use-cases' | '#privacy';
+  href: '#features' | '#use-cases' | '/privacy';
 }
 
 export interface WebsiteFeature {
@@ -61,6 +61,7 @@ export interface WebsiteContent {
   privacyTitle: readonly [string, string];
   trustPoints: readonly string[];
   footerDescription: string;
+  privacyLinkLabel: string;
 }
 
 export const websiteContentByLocale: Readonly<Record<WebsiteLocale, WebsiteContent>> = {
@@ -68,7 +69,7 @@ export const websiteContentByLocale: Readonly<Record<WebsiteLocale, WebsiteConte
     navigation: [
       { label: 'Features', href: '#features' },
       { label: 'Use cases', href: '#use-cases' },
-      { label: 'Privacy', href: '#privacy' },
+      { label: 'Privacy', href: '/privacy' },
     ],
     installLabel: 'Install for free',
     menuLabel: 'Open navigation menu',
@@ -103,12 +104,13 @@ export const websiteContentByLocale: Readonly<Record<WebsiteLocale, WebsiteConte
     privacyTitle: ['The AI is yours.', 'So is the control.'],
     trustPoints: ['Your API key stays in your local browser', 'Choose the model provider that suits you', 'Configure it and get started after installation'],
     footerDescription: 'A fun, reliable AI sidekick for your browser.',
+    privacyLinkLabel: 'Privacy policy',
   },
   'zh-CN': {
     navigation: [
       { label: '能力', href: '#features' },
       { label: '场景', href: '#use-cases' },
-      { label: '隐私', href: '#privacy' },
+      { label: '隐私', href: '/privacy' },
     ],
     installLabel: '免费安装',
     menuLabel: '打开导航菜单',
@@ -143,6 +145,7 @@ export const websiteContentByLocale: Readonly<Record<WebsiteLocale, WebsiteConte
     privacyTitle: ['AI 是你的。', '掌控感也是。'],
     trustPoints: ['API Key 仅保存在本地浏览器', '按你的习惯选择模型提供商', '安装后即可开始配置和使用'],
     footerDescription: '给浏览器装上一个有趣、靠谱的 AI 搭子。',
+    privacyLinkLabel: '隐私政策',
   },
 };
 

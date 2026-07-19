@@ -14,6 +14,7 @@ import {
 import { privacyPolicyContentByLocale } from './privacyPolicyContent';
 
 const logo = getWebsiteAssetUrl(import.meta.env.BASE_URL, 'logo.png');
+const homeUrl = getWebsiteAssetUrl(import.meta.env.BASE_URL, '');
 
 export function PrivacyPolicyApp() {
   const [locale, setLocale] = useState<WebsiteLocale>(() => getStoredWebsiteLocale(getWebsiteBrowserStorage()));
@@ -31,7 +32,7 @@ export function PrivacyPolicyApp() {
   return (
     <main className="privacy-policy-shell">
       <header className="privacy-policy-header">
-        <a className="privacy-policy-brand" href="/"><img src={logo} alt="openSider" />{content.brandName}</a>
+        <a className="privacy-policy-brand" href={homeUrl}><img src={logo} alt="openSider" />{content.brandName}</a>
         <div aria-label={content.localeToggleLabel} className="privacy-policy-locale-switcher">
           <Languages aria-hidden="true" size={17} />
           <button aria-label="EN" aria-pressed={locale === 'en'} onClick={() => handleLocaleChange('en')} type="button">EN</button>
@@ -40,7 +41,7 @@ export function PrivacyPolicyApp() {
       </header>
 
       <article className="privacy-policy-document">
-        <a className="privacy-policy-home-link" href="/"><ArrowLeft aria-hidden="true" size={16} />{content.homeLabel}</a>
+        <a className="privacy-policy-home-link" href={homeUrl}><ArrowLeft aria-hidden="true" size={16} />{content.homeLabel}</a>
         <p className="privacy-policy-kicker">openSider</p>
         <h1>{content.title}</h1>
         <p className="privacy-policy-updated">{content.updatedLabel}: {content.updatedDate}</p>

@@ -42,4 +42,14 @@ describe('ProductWebsiteApp', () => {
     expect(localStorage.getItem(WEBSITE_LOCALE_STORAGE_KEY)).toBe('zh-CN');
     expect(document.documentElement.lang).toBe('zh-CN');
   });
+
+  it('将导航和页脚的隐私入口指向独立政策页', () => {
+    act(() => root.render(<ProductWebsiteApp />));
+
+    const privacyLinks = [...container.querySelectorAll('a')]
+      .filter((link) => link.textContent === 'Privacy' || link.textContent === 'Privacy policy');
+
+    expect(privacyLinks).toHaveLength(3);
+    expect(privacyLinks.every((link) => link.getAttribute('href') === '/privacy')).toBe(true);
+  });
 });
