@@ -117,7 +117,7 @@ export const websiteContentByLocale: Readonly<Record<WebsiteLocale, WebsiteConte
     localeToggleLabel: '选择语言',
     hero: {
       kicker: '你的浏览器，终于有了搭子',
-      title: ['打开浏览器，', '让 AI 站在你这边'],
+      title: ['打开浏览器', '让 AI 站在你这边'],
       description: '聊天、翻译、网页任务，一抬眼就在身边。openSider 把好用的 AI 放进你每天都在用的浏览器',
       exploreLabel: '看看它能做什么 ↓',
       note: '适用于 Chrome · 安装免费 · 你的密钥只留在本地',
