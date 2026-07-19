@@ -4,7 +4,7 @@
 
 **Goal:** 为 openSider 官网新增 `/privacy` 独立、双语且符合 Chrome Web Store 披露要求的隐私政策页面。
 
-**Architecture:** 在 Vite 单入口中以 `window.location.pathname` 分发 `ProductWebsiteApp` 与新增的 `PrivacyPolicyApp`，避免引入路由依赖。政策文案置于独立内容模块，复用既有语言偏好；首页所有隐私入口均指向 `/privacy`。
+**Architecture:** Vite 以 `privacy/index.html` 产出 `/privacy/` 静态入口，并在首页入口中保留 `window.location.pathname` 分发，以支持本地开发和 SPA 回退。政策文案置于独立内容模块，复用既有语言偏好；首页所有隐私入口均指向 `/privacy/`。
 
 **Tech Stack:** React 19、TypeScript、Vite、Vitest、Lucide React、原生 CSS。
 

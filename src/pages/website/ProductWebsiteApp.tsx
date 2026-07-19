@@ -15,7 +15,7 @@ import {
 } from './websiteContent';
 
 const logo = getWebsiteAssetUrl(import.meta.env.BASE_URL, 'logo.png');
-const privacyPolicyUrl = getWebsiteAssetUrl(import.meta.env.BASE_URL, 'privacy');
+const privacyPolicyUrl = getWebsiteAssetUrl(import.meta.env.BASE_URL, 'privacy/');
 const featureIcons = { chat: Sparkles, translate: Languages, agent: WandSparkles, byok: Check };
 
 export function ProductWebsiteApp() {
@@ -35,10 +35,10 @@ export function ProductWebsiteApp() {
     <main className="product-website-shell">
       <header className="website-header">
         <a className="website-brand" href="#top"><img src={logo} alt="openSider" />openSider</a>
-        <nav>{content.navigation.map((item) => <a className="website-nav-link" key={item.href} href={item.href === '/privacy' ? privacyPolicyUrl : item.href}>{item.label}</a>)}</nav>
+        <nav>{content.navigation.map((item) => <a className="website-nav-link" key={item.href} href={item.href === '/privacy/' ? privacyPolicyUrl : item.href}>{item.label}</a>)}</nav>
         <details>
           <summary className="website-menu-summary"><Menu aria-hidden="true" size={20} /><span className="sr-only">{content.menuLabel}</span></summary>
-          <div className="website-menu">{content.navigation.map((item) => <a key={item.href} href={item.href === '/privacy' ? privacyPolicyUrl : item.href}>{item.label}</a>)}</div>
+          <div className="website-menu">{content.navigation.map((item) => <a key={item.href} href={item.href === '/privacy/' ? privacyPolicyUrl : item.href}>{item.label}</a>)}</div>
         </details>
         <div aria-label={content.localeToggleLabel} className="website-locale-switcher">
           <button aria-label="EN" aria-pressed={locale === 'en'} onClick={() => handleLocaleChange('en')} type="button">EN</button>

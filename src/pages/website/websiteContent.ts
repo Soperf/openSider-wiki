@@ -17,7 +17,7 @@ export interface WebsiteStorage {
 
 export interface WebsiteNavigationItem {
   label: string;
-  href: '#features' | '#use-cases' | '/privacy';
+  href: '#features' | '#use-cases' | '/privacy/';
 }
 
 export interface WebsiteFeature {
@@ -69,7 +69,7 @@ export const websiteContentByLocale: Readonly<Record<WebsiteLocale, WebsiteConte
     navigation: [
       { label: 'Features', href: '#features' },
       { label: 'Use cases', href: '#use-cases' },
-      { label: 'Privacy', href: '/privacy' },
+      { label: 'Privacy', href: '/privacy/' },
     ],
     installLabel: 'Install for free',
     menuLabel: 'Open navigation menu',
@@ -110,7 +110,7 @@ export const websiteContentByLocale: Readonly<Record<WebsiteLocale, WebsiteConte
     navigation: [
       { label: '能力', href: '#features' },
       { label: '场景', href: '#use-cases' },
-      { label: '隐私', href: '/privacy' },
+      { label: '隐私', href: '/privacy/' },
     ],
     installLabel: '免费安装',
     menuLabel: '打开导航菜单',

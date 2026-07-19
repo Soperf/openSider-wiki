@@ -50,6 +50,6 @@ describe('ProductWebsiteApp', () => {
       .filter((link) => link.textContent === 'Privacy' || link.textContent === 'Privacy policy');
 
     expect(privacyLinks).toHaveLength(3);
-    expect(privacyLinks.every((link) => link.getAttribute('href') === '/privacy')).toBe(true);
+    expect(privacyLinks.every((link) => link.getAttribute('href') === '/privacy/')).toBe(true);
   });
 });

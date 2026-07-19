@@ -42,7 +42,7 @@ describe('产品官网内容', () => {
     expect(websiteNavigation.map((item) => item.href)).toEqual([
       '#features',
       '#use-cases',
-      '/privacy',
+      '/privacy/',
     ]);
   });
 
