@@ -1,0 +1,5 @@
+/**
+ * @author xiaopeng.fxp
+ * @date 2026-07-19
+ */
+.website-locale-switcher{display:inline-flex;align-items:center;padding:3px;border:1px solid #ded8cf;border-radius:999px;background:#fffdf8}.website-locale-switcher button{border:0;border-radius:999px;background:transparent;color:#625e72;cursor:pointer;font:inherit;font-size:12px;font-weight:800;padding:7px 9px}.website-locale-switcher button[aria-pressed=true]{background:var(--ink);color:#fff}.website-locale-switcher button:focus-visible{outline:3px solid var(--violet);outline-offset:2px}@media(max-width:760px){.website-locale-switcher{order:1}.website-locale-switcher button{padding:6px 8px}}
