@@ -142,7 +142,7 @@ export const websiteContentByLocale: Readonly<Record<WebsiteLocale, WebsiteConte
       { step: '03', title: '跨标签完成任务，少一点重复', description: '让 Agent 帮你串起收集、比较与网页操作的步骤', prompt: '比较这些页面，并告诉我最值得关注的差别' },
     ],
     privacyLabel: '舒服地用，安心地用',
-    privacyTitle: ['AI 是你的。', '掌控感也是'],
+    privacyTitle: ['AI 是你的', '掌控感也是'],
     trustPoints: ['API Key 仅保存在本地浏览器', '按你的习惯选择模型提供商', '安装后即可开始配置和使用'],
     footerDescription: '给浏览器装上一个有趣、靠谱的 AI 搭子',
     privacyLinkLabel: '隐私政策',
