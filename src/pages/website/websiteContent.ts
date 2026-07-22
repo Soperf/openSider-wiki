@@ -4,7 +4,7 @@
  * 产品官网的双语文案与语言偏好。
  */
 
-export const CHROME_WEB_STORE_URL = 'https://chromewebstore.google.com/';
+export const CHROME_WEB_STORE_URL = 'https://chromewebstore.google.com/detail/opensider/ofeelmcgallchedabmghibnmajbkjamo';
 export const WEBSITE_LOCALE_STORAGE_KEY = 'opensider.website.locale';
 
 export type WebsiteLocale = 'en' | 'zh-CN';
