@@ -17,8 +17,10 @@ import {
 } from './websiteContent';
 
 describe('产品官网内容', () => {
-  it('安装入口指向可替换的 Chrome Web Store 地址', () => {
-    expect(CHROME_WEB_STORE_URL).toBe('https://chromewebstore.google.com/');
+  it('安装入口指向 openSider 的 Chrome Web Store 正式页面', () => {
+    expect(CHROME_WEB_STORE_URL).toBe(
+      'https://chromewebstore.google.com/detail/opensider/ofeelmcgallchedabmghibnmajbkjamo',
+    );
   });
 
   it('完整覆盖聊天、翻译、Agent 与 BYOK 四项能力', () => {
